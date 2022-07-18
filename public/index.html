@@ -7,10 +7,13 @@
         <link rel="stylesheet" href="./static/css/style.css">
         <script src="./static/bundle/script.js" defer></script>
         <script type="module" src="../node_modules/@insabelter/component-library-stencil/dist/component-bib-prototype-stencil/component-bib-prototype-stencil.esm.js"></script>
+        <link rel="stylesheet" href="../node_modules/@insabelter/component-library-stencil/dist/component-bib-prototype-stencil/component-bib-prototype-stencil.css" />
     </head>
     <body>
-        <p>Hello World!</p>
-        <my-component first="Insa" last="Belter"></my-component>
-        <tag-input></tag-input>
+        <lib-card card_title="Tag Input">
+            <lib-tag-input placeholder="Enter an animal"></lib-tag-input>
+        </lib-card>
+        <p>These are all the animals:</p>
+        <ul id="all_tags"></ul>
     </body>
 </html>

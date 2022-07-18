@@ -1,0 +1,1 @@
+(()=>{"use strict";var e=["Mouse","Cat","Dog"],t=document.querySelector("lib-tag-input");function n(e){var t=document.getElementById("all_tags");t.replaceChildren([]),e.map((function(e){var n=document.createElement("li");n.innerHTML=e,t.appendChild(n)}))}t.tags=e,n(e),console.log(t),t.addEventListener("tagsChanged",(function(t){n(e=t.detail)}))})();
