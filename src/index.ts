@@ -1,6 +1,8 @@
 var tags: string[] = ['Mouse','Cat','Dog'];
 const tagInputElement: any = document.querySelector('lib-tag-input');
 
+console.log("Test");
+
 function updateDOMTags(tags: string[]){
     var allTagsElement: any = document.getElementById("all_tags");
     allTagsElement.replaceChildren([]);
