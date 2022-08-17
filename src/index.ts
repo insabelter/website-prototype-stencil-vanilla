@@ -1,7 +1,5 @@
-var tags: string[] = ['Mouse','Cat','Dog'];
+var groceries: string[] = ['Mehl', 'Eier', 'Birnen', 'Mehl'];
 const tagInputElement: any = document.querySelector('lib-tag-input');
-
-console.log("Test");
 
 function updateDOMTags(tags: string[]){
     var allTagsElement: any = document.getElementById("all_tags");
@@ -13,11 +11,16 @@ function updateDOMTags(tags: string[]){
     });
 }
 
-tagInputElement.tags = tags;
-updateDOMTags(tags);
+function sortGroceries() {
+    var sortedGroceries = [...new Set(groceries)].sort();
+    return sortedGroceries;
+  }
+
+tagInputElement.tags = groceries;
+updateDOMTags(sortGroceries());
 console.log(tagInputElement);
 
 tagInputElement.addEventListener('tagsChanged', (event: { detail: string[]; }) => {
-    tags = event.detail;
-    updateDOMTags(tags);
+    groceries = event.detail;
+    updateDOMTags(sortGroceries());
 })
